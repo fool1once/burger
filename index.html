@@ -1,1 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Don Zulueta · Burger House</title>
+<meta name="description" content="Don Zulueta Burger House: burgers, sides and shakes. Poblacion, Baco, Oriental Mindoro. Prototype website.">
+<meta name="theme-color" content="#120e0a">
+<meta property="og:title" content="Don Zulueta · Burger House">
+<meta property="og:description" content="Stacked tall. Built to share.">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<meta name="page-type" content="place"><meta name="site-kind" content="other"><meta name="page-kind" content="place">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800;9..144,900&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="cur" aria-hidden="true"><span>Don Zulueta</span></div>
+<nav><div class="wrap"><a class="logo" href="#top">Don <b>Zulueta</b></a>
+<div class="links"><a href="#menu">Menu</a><a href="#about">About</a><a href="#visit">Visit</a><button class="btn cartbtn" id="cb">Order · <span id="cn">0</span></button></div></div></nav>
 
+<header class="hero" id="top"><div class="stick">
+<div class="copy wrap">
+<div class="tag in" style="animation-delay:1.4s">Open daily · Burgers, grill &amp; shakes</div>
+<h1 class="in" style="animation-delay:1.5s">Stacked tall.<span>Built to share.</span></h1>
+<p class="in" style="animation-delay:1.6s">Thick patties, melted cheese and a toasted bun. Made to order at Don Zulueta.</p>
+<div class="acts in" style="animation-delay:1.7s"><a class="btn" href="#menu">View menu</a><a class="btn ghost" href="#visit">Find us</a></div>
+</div>
+<div class="stage"><canvas id="bc" aria-label="3D burger"></canvas>
+<div class="fc c1">Flame-grilled<small>every order</small></div><div class="fc c2">From ₱149<small>sample price</small></div><div class="fc c3">Made to order<small>hot and fresh</small></div></div>
+<div class="hint">Scroll to take it apart</div>
+</div></header>
+
+<div class="mq" aria-hidden="true"><div><span>BURGERS ✦</span><span>FRIES ✦</span><span>SHAKES ✦</span><span>NACHOS ✦</span><span>ICED COFFEE ✦</span><span>BURGERS ✦</span><span>FRIES ✦</span><span>SHAKES ✦</span><span>NACHOS ✦</span><span>ICED COFFEE ✦</span></div></div>
+
+<section class="s" id="menu"><div class="wrap">
+<div class="eyebrow rv">The menu</div><h2 class="rv">Pick your stack.</h2>
+<div class="tabs rv" role="tablist" id="tabs"></div>
+<div class="grid" id="grid"></div>
+<p class="rv" style="margin-top:22px;color:var(--mu);font-size:14px">Prototype menu and prices. Everything shown is sample content.</p>
+</div></section>
+
+<section class="s about" id="about"><div class="wrap ab">
+<div class="rv"><div class="eyebrow">About us</div><h2>A burger house with a big table.</h2>
+<p>Don Zulueta started with one idea: a burger that is worth sharing. Every patty is pressed to order, grilled hot and stacked by hand with fresh toppings.</p>
+<p>It is a place for after-school hangouts, family dinners and late snacks with friends. Come hungry, stay for the shakes.</p>
+<div class="stats"><div><b>5</b><span>signature burgers</span></div><div><b>12</b><span>menu favourites</span></div><div><b>4</b><span>ways to pay</span></div></div></div>
+<div class="own rv"><div class="av">DZ</div><q>“Good food is better when the table is full.”</q><small>Don Zulueta · Owner and grill master (sample text)</small>
+<div class="vals"><div><i>🔥</i>Grilled to order</div><div><i>🥬</i>Fresh toppings daily</div><div><i>🤝</i>Made for sharing</div></div></div>
+</div></section>
+
+<section class="s" id="visit"><div class="wrap visit">
+<div class="rv"><div class="eyebrow">Visit us</div><h2>Come say hi.</h2>
+<dl><div><dt>Address</dt><dd>Poblacion, Baco, Oriental Mindoro, Philippines</dd></div>
+<div><dt>Hours (sample)</dt><dd>Daily, 10:00 AM – 10:00 PM</dd></div>
+<div><dt>Pay with</dt><dd>GCash · Maya · Card · Cash</dd></div></dl>
+<a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Poblacion+Baco+Oriental+Mindoro">Open real map</a></div>
+<div class="mapbox rv"><canvas id="mc" aria-label="Interactive 3D map"></canvas>
+<div class="ctl"><button id="zi" aria-label="Zoom in">+</button><button id="zo" aria-label="Zoom out">−</button><button id="rs" aria-label="Reset view">⟲</button></div>
+<div class="mi" id="mi"><b>Stylized map of the restaurant</b>Drag to rotate, use + and − to zoom, tap a pin for details.</div></div>
+</div></section>
+
+<footer><div class="wrap"><div class="big">Don Zulueta</div><p>© 2026 Don Zulueta · Poblacion, Baco, Oriental Mindoro · Prototype website</p></div></footer>
+
+<button class="bar" id="bar"><span id="bn">0 items</span><span id="bt">₱0</span></button>
+<div class="veil" id="veil"></div>
+<aside class="dr" id="dr" aria-label="Your order"><header><h3 id="dt">Your order</h3><button class="x" id="xb" aria-label="Close">✕</button></header><div class="body" id="bd"></div></aside>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/burger.js"></script>
+<script src="js/map.js"></script>
+</body>
+</html>
